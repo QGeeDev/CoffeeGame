@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvjtgcd6nbiv7"]
+
+[ext_resource type="Script" path="res://Scenes/Testing_Scenes/Inventory_Container.gd" id="1_uclo8"]
+
+[sub_resource type="Environment" id="Environment_sbb5w"]
+background_mode = 3
+background_color = Color(1, 0, 0, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.0745098, 0.313726, 1, 1)
+
+[sub_resource type="Gradient" id="Gradient_w88c8"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_54c3e"]
+gradient = SubResource("Gradient_w88c8")
+
+[node name="RootNode" type="Node2D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sbb5w")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(540, 960)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.690196, 0, 0, 1)
+
+[node name="Inventory_Container" type="Node2D" parent="."]
+position = Vector2(263, 182)
+script = ExtResource("1_uclo8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory_Container"]
+texture = SubResource("GradientTexture2D_54c3e")
