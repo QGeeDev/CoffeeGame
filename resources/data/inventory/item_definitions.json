@@ -2,5 +2,13 @@
 	{
 		"id": "cheap_beans",
 		"name": "Cheap Coffee Beans"
+	},
+	{
+		"id": "average_beans",
+		"name": "Average Coffee Beans"
+	},
+	{
+		"id": "specialty_beans",
+		"name": "Specialty Coffee Beans"
 	}
 ]
