@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvjtgcd6nbiv7"]
+[gd_scene load_steps=8 format=3 uid="uid://dvjtgcd6nbiv7"]
 
 [ext_resource type="Script" path="res://addons/gloot/core/inventory.gd" id="1_drkeo"]
+[ext_resource type="Script" path="res://Scenes/Testing_Scenes/CoffeeCounter.gd" id="1_rp3h2"]
 [ext_resource type="Script" path="res://addons/gloot/core/item_protoset.gd" id="2_6e8j0"]
 
 [sub_resource type="Environment" id="Environment_sbb5w"]
@@ -9,7 +10,9 @@ background_color = Color(1, 0, 0, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.0745098, 0.313726, 1, 1)
 
-[sub_resource type="Resource" id="Resource_ayfbc"]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_52jhi"]
+
+[sub_resource type="Resource" id="Resource_t7h2u"]
 script = ExtResource("2_6e8j0")
 json_data = "[
 	{
@@ -24,7 +27,10 @@ json_data = "[
 		\"id\": \"specialty_beans\",
 		\"name\": \"Specialty Coffee Beans\"
 	}
-]"
+]
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjuji"]
 
 [node name="RootNode" type="Node2D"]
 
@@ -37,6 +43,35 @@ offset = Vector2(540, 960)
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0.690196, 0, 0, 1)
 
-[node name="Inventory" type="Node" parent="."]
+[node name="CoffeeCounter" type="Node2D" parent="."]
+position = Vector2(500, 250)
+script = ExtResource("1_rp3h2")
+
+[node name="Sprite2D" type="Sprite2D" parent="CoffeeCounter"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(128, 128)
+texture = SubResource("PlaceholderTexture2D_52jhi")
+
+[node name="Inventory" type="Node" parent="CoffeeCounter"]
 script = ExtResource("1_drkeo")
-item_protoset = SubResource("Resource_ayfbc")
+item_protoset = SubResource("Resource_t7h2u")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CoffeeCounter"]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 32
+text = "Storage 
+Space"
+fit_content = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CoffeeCounter"]
+scale = Vector2(7, 7)
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoffeeCounter/StaticBody2D"]
+shape = SubResource("RectangleShape2D_rjuji")
+
+[connection signal="input_event" from="CoffeeCounter/StaticBody2D" to="CoffeeCounter" method="_on_static_body_2d_input_event"]

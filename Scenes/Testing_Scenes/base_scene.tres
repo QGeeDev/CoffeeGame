@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemProtoset" load_steps=2 format=3 uid="uid://c5jfwquftsekt"]
+
+[ext_resource type="Script" path="res://addons/gloot/core/item_protoset.gd" id="1_4uj6k"]
+
+[resource]
+script = ExtResource("1_4uj6k")
+json_data = "[
+	{
+		\"id\": \"cheap_beans\",
+		\"name\": \"Cheap Coffee Beans\"
+	},
+	{
+		\"id\": \"average_beans\",
+		\"name\": \"Average Coffee Beans\"
+	},
+	{
+		\"id\": \"specialty_beans\",
+		\"name\": \"Specialty Coffee Beans\"
+	}
+]"
