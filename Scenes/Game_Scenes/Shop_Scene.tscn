@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://6obysl4x4lb6"]
+
+[ext_resource type="PackedScene" uid="uid://d2lijak1d8k6x" path="res://Scenes/Game_Scenes/Components/Storage_Container.tscn" id="1_rjmh1"]
+
+[node name="ShopScene" type="Node2D"]
+
+[node name="StorageContainer" parent="." instance=ExtResource("1_rjmh1")]
+position = Vector2(250, 250)
