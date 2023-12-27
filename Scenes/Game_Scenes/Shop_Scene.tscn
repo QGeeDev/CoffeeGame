@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://6obysl4x4lb6"]
+[gd_scene load_steps=3 format=3 uid="uid://6obysl4x4lb6"]
 
 [ext_resource type="PackedScene" uid="uid://d2lijak1d8k6x" path="res://Scenes/Game_Scenes/Components/Storage_Container.tscn" id="1_rjmh1"]
+[ext_resource type="PackedScene" uid="uid://codf4o2pvvfih" path="res://Scenes/Game_Scenes/Components/Coffee_Machine.tscn" id="2_7kuno"]
 
 [node name="ShopScene" type="Node2D"]
 
 [node name="StorageContainer" parent="." instance=ExtResource("1_rjmh1")]
-position = Vector2(250, 250)
+position = Vector2(134, 166)
+
+[node name="CoffeeMachine" parent="." instance=ExtResource("2_7kuno")]
+position = Vector2(383, 188)
