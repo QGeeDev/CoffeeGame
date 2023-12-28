@@ -9,20 +9,27 @@
 [sub_resource type="Resource" id="Resource_f6mjo"]
 script = ExtResource("3_7p4np")
 json_data = "[
-	{
-		\"id\": \"cheap_beans\",
-		\"name\": \"Cheap Coffee Beans\"
-	},
-	{
-		\"id\": \"average_beans\",
-		\"name\": \"Average Coffee Beans\"
-	},
-	{
-		\"id\": \"specialty_beans\",
-		\"name\": \"Specialty Coffee Beans\"
-	}
-]
-"
+    {
+        \"id\": \"cheap_beans\",
+        \"name\": \"Cheap Coffee Beans\"
+    },
+    {
+        \"id\": \"average_beans\",
+        \"name\": \"Average Coffee Beans\"
+    },
+    {
+        \"id\": \"specialty_beans\",
+        \"name\": \"Specialty Coffee Beans\"
+    },
+    {
+        \"id\": \"milk\",
+        \"name\": \"Milk\"
+    },
+    {
+        \"id\": \"oat_milk\",
+        \"name\": \"Oat Milk\"
+    }
+]"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3q24"]
 

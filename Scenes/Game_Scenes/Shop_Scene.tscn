@@ -6,7 +6,7 @@
 [node name="ShopScene" type="Node2D"]
 
 [node name="StorageContainer" parent="." instance=ExtResource("1_rjmh1")]
-position = Vector2(134, 166)
+position = Vector2(74, 76)
 
 [node name="CoffeeMachine" parent="." instance=ExtResource("2_7kuno")]
-position = Vector2(383, 188)
+position = Vector2(467, 72)
