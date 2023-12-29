@@ -61,6 +61,7 @@ input_pickable = true
 shape = SubResource("RectangleShape2D_rvekr")
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="item_added" from="Inventory" to="." method="_on_inventory_stacked_item_added"]
 [connection signal="input_event" from="StaticBody2D" to="." method="_on_static_body_2d_input_event"]
