@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://tg2aqksqc775"]
+
+[ext_resource type="Script" path="res://Scenes/Game_Scenes/Actors/Customer.gd" id="1_mftoi"]
+[ext_resource type="Texture2D" uid="uid://bfp3lk80u0ktn" path="res://resources/images/sprites/customer/Customer.png" id="1_xgyc0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qi4bo"]
+radius = 40.0
+
+[node name="Customer" type="Node2D"]
+script = ExtResource("1_mftoi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xgyc0")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_qi4bo")
