@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://codf4o2pvvfih"]
+[gd_scene load_steps=8 format=3 uid="uid://codf4o2pvvfih"]
 
 [ext_resource type="Script" path="res://Scenes/Game_Scenes/Components/Coffee_Machine.gd" id="1_ctvyi"]
 [ext_resource type="Script" path="res://addons/gloot/core/inventory_stacked.gd" id="2_0deb8"]
 [ext_resource type="Script" path="res://addons/gloot/core/item_protoset.gd" id="2_tjcco"]
+[ext_resource type="Script" path="res://Scenes/Game_Scenes/Components/CraftingComponent.gd" id="4_x3btc"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ksnpu"]
 size = Vector2(128, 128)
@@ -62,6 +63,11 @@ shape = SubResource("RectangleShape2D_rvekr")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Components" type="Node" parent="."]
+
+[node name="CraftingComponent" type="Node" parent="Components"]
+script = ExtResource("4_x3btc")
 
 [connection signal="item_added" from="Inventory" to="." method="_on_inventory_stacked_item_added"]
 [connection signal="input_event" from="StaticBody2D" to="." method="_on_static_body_2d_input_event"]

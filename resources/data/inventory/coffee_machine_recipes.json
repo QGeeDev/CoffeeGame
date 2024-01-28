@@ -1,0 +1,17 @@
+[
+	{
+		"id": "americano",
+		"name": "Americano",
+		"ingredient_ids": ["beans:*"]
+	},
+	{
+		"id": "latte",
+		"name": "Latte",
+		"ingredient_ids": ["beans:*", "milk:whole_milk"]
+	},
+	{
+		"id": "oat_latte",
+		"name": "Oat Latte",
+		"ingredient_ids": ["beans:*", "milk:oat_milk"]
+	}
+]

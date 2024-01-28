@@ -15,26 +15,28 @@ func _init():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_inventory = get_node("Inventory");
+	var protoset = FileAccess.open("res://resources/data/inventory/item_definitions.json", FileAccess.READ)
+	_inventory.item_protoset.parse(protoset.get_as_text());
 	_brewingTimer = get_node("Timer");
 
 
 func _on_static_body_2d_input_event(viewport, event, shape_idx):
 	if(event is InputEventScreenTouch and event.is_pressed()):
 		print_debug("Event triggered");
-		_inventory.create_and_add_item("beans");
+		_inventory.create_and_add_item("cheap_beans");
 
 
 func _on_inventory_stacked_item_added(item):
 	match(item.get_property("id")):
-		"beans":
+		"cheap_beans":
 			print_debug("Beans detected");
 			BeginBrewing();
 
 func BeginBrewing():
-	if(!_inventory.has_item_by_id("beans") || currentState != MACHINE_STATE.IDLE):
+	if(!_inventory.has_item_by_id("cheap_beans") || currentState != MACHINE_STATE.IDLE):
 		pass;
 		
-	_inventory.remove_item(_inventory.get_item_by_id("beans"));
+	_inventory.remove_item(_inventory.get_item_by_id("cheap_beans"));
 	_brewingTimer.wait_time = TOTAL_BREW_TIME;
 	currentState = MACHINE_STATE.BREWING;
 	_brewingTimer.start()

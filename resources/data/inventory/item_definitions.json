@@ -1,14 +1,37 @@
 [
 	{
 		"id": "cheap_beans",
-		"name": "Cheap Coffee Beans"
+		"name": "Cheap Coffee Beans",
+		"ingredient_type": "beans"
 	},
 	{
 		"id": "average_beans",
-		"name": "Average Coffee Beans"
+		"name": "Average Coffee Beans",
+		"ingredient_type": "beans"
 	},
 	{
 		"id": "specialty_beans",
-		"name": "Specialty Coffee Beans"
+		"name": "Specialty Coffee Beans",
+		"ingredient_type": "beans"
+	},
+	{
+		"id": "whole_milk",
+		"name": "Whole Milk",
+		"ingredient_type": "milk"
+	},
+	{
+		"id": "oat_milk",
+		"name": "Oat Milk",
+		"ingredient_type": "milk"
+	},
+	{
+		"id": "coffee_shot",
+		"name": "Espresso Shot",
+		"ingredient_type": "coffee"
+	},
+	{
+		"id": "americano",
+		"name": "Americano",
+		"ingredient_type": "coffee"
 	}
 ]
